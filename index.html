@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimson Tone - Guitarras de Alta Gama</title>
+    <link rel="icon" type="image/webp" href="Images/CrimsonTone.jpg">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero-section" id="home">
+        <div class="navbar">
+            <div class="logo">
+                <img src="Images/CrimsonTone.jpg" alt="Crimson Tone Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
+                    <li><a href="#cobertura">Cobertura</a></li>
+                    <li><a href="guitarras.html">Guitarras</a></li>
+                    <li><a href="#contacto-footer">Contacto</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li> </ul>
+            </nav>
+        </div>
+        <div class="hero-content">
+            <h1>CRIMSON <span class="highlight-tone">TONE</span></h1>
+            <p>Encuentra las mejores guitarras con los mejores precios</p>
+            <p>Y a tu preferencia!</p>
+            <a href="guitarras.html" class="btn">Explorar Guitarras</a>
+        </div>
+    </header>
+
+    <section id="quienes-somos" class="about-us-section">
+        <div class="container">
+            <h2>¿Quiénes Somos?</h2>
+            <p>CrimsonTone es una tienda online de guitarras de alta gama, nos enfocamos tanto en la calidad de nuestras guitarras como en obtener los mejores precios del mercado y además con modelos de todo gusto, para todo tipo de guitarristas, desde shreders, hasta guitarristas de jazz. Todo en guitarras aquí en tu tienda favorita.</p>
+            <div class="mission-vision">
+                <div class="mission">
+                    <h3>Misión</h3>
+                    <p>Nuestro objetivo es proveer a nuestros compradores de guitarras de la mejor calidad y la más alta gama con precios accesibles.</p>
+                </div>
+                <div class="vision">
+                    <h3>Visión</h3>
+                    <p>Nuestra Visión es convertirnos en los vendedores #1 a nivel sudamerica y ampliarnos a todo el continente en un lapso de 10 años.</p>
+                </div>
+                <div class="suggestions">
+                    <h3>Sugerencias</h3>
+                    <p>¡Tu opinión es importante!</p>
+                    <form action="#" method="POST">
+                        <textarea placeholder="Escribe aquí tus sugerencias..."></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cobertura" class="coverage-section">
+        <div class="container">
+            <h2>Cobertura</h2>
+            <p>Realizamos entregas a nivel sudamerica, trabajos a través de couriers internacionales certificados.</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61931278.55192509!2d-84.51315207802344!3d-18.664657277928754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9409341c355d34b5%3A0x69d40ccfc9c6e32b!2sSouth%20America!5e0!3m2!1sen!2sec!4v1749163934696!5m2!1sen!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer" id="contacto-footer">
+        <div class="container footer-content">
+            <div class="social-media">
+                <h4>Nuestras Redes</h4>
+                <ul>
+                    <li><a href="https://instagram.com/Crimson_Tone" target="_blank"><i class="fab fa-instagram"></i> Crimson_Tone</a></li>
+                    <li><a href="https://facebook.com/CrimsonToneEcuador" target="_blank"><i class="fab fa-facebook"></i> Crimson Tone Ecuador</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h4>Contacto</h4>
+                <p>Correo electrónico: <a href="mailto:crimson@tone.com">crimson@tone.com</a></p>
+                <p>Contacto: + 593 987 269 974</p>
+            </div>
+            <div class="copyright">
+                <p>© <span id="current-year"></span> Crimson Tone. Derechos Reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

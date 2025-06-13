@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitarras - Crimson Tone</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero-section" id="guitarras-home">
+        <div class="navbar">
+            <div class="logo">
+                <img src="Images/CrimsonTone.jpg" alt="Crimson Tone Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#home">Inicio</a></li>
+                    <li><a href="index.html#quienes-somos">¿Quiénes Somos?</a></li>
+                    <li><a href="index.html#cobertura">Cobertura</a></li>
+                    <li><a href="guitarras.html">Guitarras</a></li>
+                    <li><a href="index.html#contacto-footer">Contacto</a></li>
+                    <li class="cart-link"><a href="pago.html"><i class="fas fa-shopping-cart"></i> Carrito (<span id="cantidad-carrito-nav-guitarras">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-content">
+            <h1>NUESTRAS <span class="highlight-tone">GUITARRAS</span></h1>
+            <p>Encuentra la inspiración en cada cuerda y diseño</p>
+            <p>¡Para cada estilo y nivel!</p>
+            <a href="#guitarras-disponibles" class="btn">Explorar Modelos</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="guitarras-disponibles" class="guitars-listing-section">
+            <div class="container">
+                <h2>Modelos Disponibles</h2>
+                <p>Explora nuestra exclusiva selección de guitarras eléctricas, acústicas y bajos.</p>
+
+                <div class="guitar-grid">
+                    <div class="guitar-card">
+                        <div class="image-container">
+                            <img src="Images/Fender American Deluxe.jpg" alt="Guitarra Fender American Deluxe Stratocaster">
+                            <div class="favorite-icon-container"><i class="fas fa-heart"></i></div>
+                        </div>
+                        <h3>Fender Stratocaster American Deluxe</h3>
+                        <p class="description">Versatilidad moderna con hardware avanzado y un sonido Stratocaster impecable.</p>
+                        <div class="card-bottom-info">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="price">$950</p>
+                            <div class="info-toggle add-to-cart" data-id="fender-american-deluxe" data-nombre="Fender Stratocaster American Deluxe" data-precio="950" data-imagen="Images/Fender American Deluxe.jpg">
+                                <i class="fas fa-shopping-cart"></i> Añadir
+                            </div>
+                        </div>
+                        <div class="details-toggle">
+                            <button class="btn btn-small view-details-btn">Ver Detalles</button>
+                            <div class="guitar-specs" style="display: none;">
+                                <h4>Especificaciones:</h4>
+                                <ul>
+                                    <li><strong>Micrófonos:</strong> Single-coil (Fender N3 Noiseless)</li>
+                                    <li><strong>Madera del Mástil:</strong> Arce (Maple)</li>
+                                    <li><strong>Madera del Cuerpo:</strong> Aliso (Alder)</li>
+                                    <li><strong>Puente:</strong> Semi-flotante (Trémolo Sincronizado de 2 puntos con Selletas de Acero Dobladas)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guitar-card">
+                        <div class="image-container">
+                            <img src="Images/Gibson Les Paul Standard 50s.webp" alt="Guitarra Gibson Les Paul Standard 50s">
+                            <div class="favorite-icon-container"><i class="fas fa-heart"></i></div>
+                        </div>
+                        <h3>Gibson Les Paul Standard 50s</h3>
+                        <p class="description">El tono clásico y potente de los años 50 con humbuckers PAF y un sustain legendario.</p>
+                        <div class="card-bottom-info">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="price">$2500</p>
+                            <div class="info-toggle add-to-cart" data-id="gibson-les-paul-50s" data-nombre="Gibson Les Paul Standard 50s" data-precio="2500" data-imagen="Images/Gibson Les Paul Standard 50s.webp">
+                                <i class="fas fa-shopping-cart"></i> Añadir
+                            </div>
+                        </div>
+                        <div class="details-toggle">
+                            <button class="btn btn-small view-details-btn">Ver Detalles</button>
+                            <div class="guitar-specs" style="display: none;">
+                                <h4>Especificaciones:</h4>
+                                <ul>
+                                    <li><strong>Micrófonos:</strong> Humbucker (BurstBucker 1 & BurstBucker 2)</li>
+                                    <li><strong>Madera del Mástil:</strong> Caoba</li>
+                                    <li><strong>Madera del Cuerpo:</strong> Caoba con tapa de Arce</li>
+                                    <li><strong>Puente:</strong> Fijo (ABR-1 Tune-O-Matic)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guitar-card">
+                        <div class="image-container">
+                            <img src="Images/Ibanez Jem Steve Vai Signature.jpg" alt="Guitarra Ibanez JEM7V White (Steve Vai Signature)">
+                            <div class="favorite-icon-container"><i class="fas fa-heart"></i></div>
+                        </div>
+                        <h3>Ibanez Jem Steve Vai Signature</h3>
+                        <p class="description">Diseñada para la expresión ilimitada y la velocidad. El arma definitiva para shredders.</p>
+                        <div class="card-bottom-info">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="price">$750</p>
+                            <div class="info-toggle add-to-cart" data-id="ibanez-jem-vai" data-nombre="Ibanez Jem Steve Vai Signature" data-precio="750" data-imagen="Images/Ibanez Jem Steve Vai Signature.jpg">
+                                <i class="fas fa-shopping-cart"></i> Añadir
+                            </div>
+                        </div>
+                        <div class="details-toggle">
+                            <button class="btn btn-small view-details-btn">Ver Detalles</button>
+                            <div class="guitar-specs" style="display: none;">
+                                <h4>Especificaciones:</h4>
+                                <ul>
+                                    <li><strong>Micrófonos:</strong> Humbucker/Single/Humbucker (DiMarzio Evolution H/S/H)</li>
+                                    <li><strong>Madera del Mástil:</strong> Arce/Nogal (5 piezas)</li>
+                                    <li><strong>Madera del Cuerpo:</strong> Aliso</li>
+                                    <li><strong>Puente:</strong> Floyd Rose (Trémolo Edge)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guitar-card">
+                        <div class="image-container">
+                            <img src="Images/Fender Telecaster American Professional II.jpg" alt="Guitarra Fender Telecaster American Professional II">
+                            <div class="favorite-icon-container"><i class="fas fa-heart"></i></div>
+                        </div>
+                        <h3>Fender Telecaster American Prof. II</h3>
+                        <p class="description">El icónico "twang" y la fiabilidad de la Telecaster, mejorados para el guitarrista moderno.</p>
+                        <div class="card-bottom-info">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="price">$700</p>
+                            <div class="info-toggle add-to-cart" data-id="fender-telecaster-prof-ii" data-nombre="Fender Telecaster American Prof. II" data-precio="700" data-imagen="Images/Fender Telecaster American Professional II.jpg">
+                                <i class="fas fa-shopping-cart"></i> Añadir
+                            </div>
+                        </div>
+                        <div class="details-toggle">
+                            <button class="btn btn-small view-details-btn">Ver Detalles</button>
+                            <div class="guitar-specs" style="display: none;">
+                                <h4>Especificaciones:</h4>
+                                <ul>
+                                    <li><strong>Micrófonos:</strong> Single-coil (Fender V-Mod II Single-Coil Tele)</li>
+                                    <li><strong>Madera del Mástil:</strong> Arce</li>
+                                    <li><strong>Madera del Cuerpo:</strong> Aliso o Fresno</li>
+                                    <li><strong>Puente:</strong> Fijo (Telecaster Top-Load/String-Through)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guitar-card">
+                        <div class="image-container">
+                            <img src="Images/Gibson EDS-1275 Doubleneck.jpg" alt="Guitarra Gibson EDS-1275 Doubleneck">
+                            <div class="favorite-icon-container"><i class="fas fa-heart"></i></div>
+                        </div>
+                        <h3>Gibson EDS-1275 Doubleneck</h3>
+                        <p class="description">El legendario doble mástil que define el rock clásico. Versatilidad de 6 y 12 cuerdas.</p>
+                        <div class="card-bottom-info">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="price">$9000</p>
+                            <div class="info-toggle add-to-cart" data-id="gibson-eds-1275" data-nombre="Gibson EDS-1275 Doubleneck" data-precio="9000" data-imagen="Images/Gibson EDS-1275 Doubleneck.jpg">
+                                <i class="fas fa-shopping-cart"></i> Añadir
+                            </div>
+                        </div>
+                        <div class="details-toggle">
+                            <button class="btn btn-small view-details-btn">Ver Detalles</button>
+                            <div class="guitar-specs" style="display: none;">
+                                <h4>Especificaciones:</h4>
+                                <ul>
+                                    <li><strong>Micrófonos:</strong> Humbucker (Custombucker Alnico III)</li>
+                                    <li><strong>Madera del Mástil:</strong> Caoba</li>
+                                    <li><strong>Madera del Cuerpo:</strong> Caoba</li>
+                                    <li><strong>Puente:</strong> Fijo (Tune-O-Matic en ambos mástiles)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guitar-card">
+                        <div class="image-container">
+                            <img src="Images/PRS SE Custom 24.jpg" alt="Guitarra PRS SE Custom 24">
+                            <div class="favorite-icon-container"><i class="fas fa-heart"></i></div>
+                        </div>
+                        <h3>PRS SE Custom 24</h3>
+                        <p class="description">La calidad y el diseño de PRS en un paquete accesible, con tono y facilidad de ejecución.</p>
+                        <div class="card-bottom-info">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="price">$880</p>
+                            <div class="info-toggle add-to-cart" data-id="prs-se-custom-24" data-nombre="PRS SE Custom 24" data-precio="880" data-imagen="Images/PRS SE Custom 24.jpg">
+                                <i class="fas fa-shopping-cart"></i> Añadir
+                            </div>
+                        </div>
+                        <div class="details-toggle">
+                            <button class="btn btn-small view-details-btn">Ver Detalles</button>
+                            <div class="guitar-specs" style="display: none;">
+                                <h4>Especificaciones:</h4>
+                                <ul>
+                                    <li><strong>Micrófonos:</strong> Humbucker (PRS 85/15 "S")</li>
+                                    <li><strong>Madera del Mástil:</strong> Arce con diapasón de Palo de Rosa</li>
+                                    <li><strong>Madera del Cuerpo:</strong> Caoba con tapa de Arce</li>
+                                    <li><strong>Puente:</strong> Semi-flotante (Trémolo Patentado PRS)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guitar-card">
+                        <div class="image-container">
+                            <img src="Images/Epiphone Casino.webp" alt="Guitarra Epiphone Casino">
+                            <div class="favorite-icon-container"><i class="fas fa-heart"></i></div>
+                        </div>
+                        <h3>Epiphone Casino</h3>
+                        <p class="description">Un clásico semi-hueco con un sonido cálido y resonante, ideal para blues y rock.</p>
+                        <div class="card-bottom-info">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="price">$650</p>
+                            <div class="info-toggle add-to-cart" data-id="epiphone-casino" data-nombre="Epiphone Casino" data-precio="650" data-imagen="Images/Epiphone Casino.webp">
+                                <i class="fas fa-shopping-cart"></i> Añadir
+                            </div>
+                        </div>
+                        <div class="details-toggle">
+                            <button class="btn btn-small view-details-btn">Ver Detalles</button>
+                            <div class="guitar-specs" style="display: none;">
+                                <h4>Especificaciones:</h4>
+                                <ul>
+                                    <li><strong>Micrófonos:</strong> Single-coil (P-90 Dogear)</li>
+                                    <li><strong>Madera del Mástil:</strong> Caoba</li>
+                                    <li><strong>Madera del Cuerpo:</strong> Arce Laminado de 5 capas</li>
+                                    <li><strong>Puente:</strong> Fijo (LockTone Tune-O-Matic)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guitar-card">
+                        <div class="image-container">
+                            <img src="Images/Gibson SG.jpg" alt="Guitarra Gibson SG">
+                            <div class="favorite-icon-container"><i class="fas fa-heart"></i></div>
+                        </div>
+                        <h3>Gibson SG</h3>
+                        <p class="description">Un diseño agresivo con un tono crudo y poderoso. Ideal para rock, blues y metal.</p>
+                        <div class="card-bottom-info">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="price">$750</p>
+                            <div class="info-toggle add-to-cart" data-id="gibson-sg" data-nombre="Gibson SG" data-precio="750" data-imagen="Images/Gibson SG.jpg">
+                                <i class="fas fa-shopping-cart"></i> Añadir
+                            </div>
+                        </div>
+                        <div class="details-toggle">
+                            <button class="btn btn-small view-details-btn">Ver Detalles</button>
+                            <div class="guitar-specs" style="display: none;">
+                                <h4>Especificaciones:</h4>
+                                <ul>
+                                    <li><strong>Micrófonos:</strong> Humbucker (61R & 61T Burstbuckers)</li>
+                                    <li><strong>Madera del Mástil:</strong> Caoba</li>
+                                    <li><strong>Madera del Cuerpo:</strong> Caoba</li>
+                                    <li><strong>Puente:</strong> Fijo (ABR-1 Tune-O-Matic)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guitar-card">
+                        <div class="image-container">
+                            <img src="Images/Ibanez Gio GRX70.jpg" alt="Guitarra Ibanez Gio GRX70">
+                            <div class="favorite-icon-container"><i class="fas fa-heart"></i></div>
+                        </div>
+                        <h3>Ibanez Gio GRX70</h3>
+                        <p class="description">Una excelente opción para principiantes y rockeros, con un mástil rápido y pastillas versátiles.</p>
+                        <div class="card-bottom-info">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="price">$800</p>
+                            <div class="info-toggle add-to-cart" data-id="ibanez-gio-grx70" data-nombre="Ibanez Gio GRX70" data-precio="800" data-imagen="Images/Ibanez Gio GRX70.jpg">
+                                <i class="fas fa-shopping-cart"></i> Añadir
+                            </div>
+                        </div>
+                        <div class="details-toggle">
+                            <button class="btn btn-small view-details-btn">Ver Detalles</button>
+                            <div class="guitar-specs" style="display: none;">
+                                <h4>Especificaciones:</h4>
+                                <ul>
+                                    <li><strong>Micrófonos:</strong> Humbucker/Single/Humbucker (Ibanez Infinity R/RS/R)</li>
+                                    <li><strong>Madera del Mástil:</strong> Arce</li>
+                                    <li><strong>Madera del Cuerpo:</strong> Álamo</li>
+                                    <li><strong>Puente:</strong> Semi-flotante (Trémolo T106)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" id="contacto-footer">
+        <div class="container footer-content">
+            <div class="social-media">
+                <h4>Nuestras Redes</h4>
+                <ul>
+                    <li><a href="https://instagram.com/Crimson_Tone" target="_blank"><i class="fab fa-instagram"></i> Crimson_Tone</a></li>
+                    <li><a href="https://facebook.com/CrimsonToneEcuador" target="_blank"><i class="fab fa-facebook"></i> Crimson Tone Ecuador</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h4>Contacto</h4>
+                <p>Correo electrónico: <a href="mailto:crimson@tone.com">crimson@tone.com</a></p>
+                <p>Contacto: +593 987 269 974</p>
+            </div>
+            <div class="copyright">
+                <p>© <span id="current-year"></span> Crimson Tone. Derechos Reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const detailButtons = document.querySelectorAll('.view-details-btn');
+
+            detailButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const specsContainer = button.nextElementSibling;
+
+                    if (specsContainer.style.display === 'none' || specsContainer.style.display === '') {
+                        specsContainer.style.display = 'block';
+                        button.textContent = 'Ocultar Detalles';
+                    } else {
+                        specsContainer.style.display = 'none';
+                        button.textContent = 'Ver Detalles';
+                    }
+                });
+            });
+
+            const favoriteIconContainers = document.querySelectorAll('.favorite-icon-container');
+
+            favoriteIconContainers.forEach(container => {
+                container.addEventListener('click', () => {
+                    container.classList.toggle('favorited');
+                });
+            });
+
+            const botonesAgregarCarrito = document.querySelectorAll('.info-toggle.add-to-cart');
+            const cantidadCarritoNav = document.getElementById('cantidad-carrito-nav-guitarras');
+
+            function actualizarContadorCarrito() {
+                const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                let totalItems = 0;
+                carrito.forEach(item => {
+                    totalItems += item.cantidad;
+                });
+                cantidadCarritoNav.textContent = totalItems;
+            }
+
+            actualizarContadorCarrito();
+
+
+            botonesAgregarCarrito.forEach(boton => {
+                boton.addEventListener('click', (event) => {
+                    event.preventDefault();
+
+                    const guitarId = boton.dataset.id;
+                    const guitarNombre = boton.dataset.nombre;
+                    const guitarPrecio = parseFloat(boton.dataset.precio);
+                    const guitarImagen = boton.dataset.imagen;
+
+                    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+                    const itemExistente = carrito.find(item => item.id === guitarId);
+
+                    if (itemExistente) {
+                        itemExistente.cantidad += 1;
+                    } else {
+                        carrito.push({
+                            id: guitarId,
+                            nombre: guitarNombre,
+                            precio: guitarPrecio,
+                            imagen: guitarImagen,
+                            cantidad: 1
+                        });
+                    }
+
+                    localStorage.setItem('carrito', JSON.stringify(carrito));
+
+                    alert(`${guitarNombre} ha sido añadido al carrito. Redirigiendo a la página de pago.`);
+
+                    actualizarContadorCarrito();
+
+                    window.location.href = 'pago.html';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

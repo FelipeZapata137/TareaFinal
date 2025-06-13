@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Crimson Tone</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/pagoyenvio.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero-section" id="checkout-home">
+        <div class="navbar">
+            <div class="logo">
+                <img src="Images/CrimsonTone.jpg" alt="Crimson Tone Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#home">Inicio</a></li>
+                    <li><a href="index.html#quienes-somos">¿Quiénes Somos?</a></li>
+                    <li><a href="index.html#cobertura">Cobertura</a></li>
+                    <li><a href="guitarras.html">Guitarras</a></li>
+                    <li><a href="index.html#contacto-footer">Contacto</a></li>
+                    <li class="cart-link"><a href="pago.html"><i class="fas fa-shopping-cart"></i> Carrito (<span id="cantidad-carrito-nav-pago">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-content">
+            <h1>TU <span class="highlight-tone">CARRITO</span></h1>
+            <p>Revisa y finaliza tu compra</p>
+        </div>
+    </header>
+
+    <main class="container pago-container">
+        <h1>Confirmar Compra</h1>
+
+        <div class="pago-grid">
+            <section class="resumen-carrito">
+                <h2>1. Resumen del Carrito</h2>
+                <ul class="lista-productos-carrito" id="lista-productos-carrito">
+                    </ul>
+                
+                <div id="empty-cart-message" class="carrito-vacio-mensaje" style="display: none;">
+                    Tu carrito está vacío. ¡Explora nuestras guitarras y añade tus favoritas!
+                </div>
+
+                <div class="total-resumen">
+                    <p>Subtotal: <span id="subtotal">$0.00</span></p>
+                    <p>Costo de Envío: <span id="costo-envio">Gratis</span></p>
+                    <p class="total-final">Total: <span id="total-final">$0.00</span></p>
+                </div>
+            </section>
+
+            <section class="informacion-envio">
+                <h2>2. Información de Envío</h2>
+                <form id="form-envio">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Dirección de Envío:</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad:</label>
+                        <input type="text" id="ciudad" name="ciudad" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="provincia">Provincia/Estado:</label>
+                        <input type="text" id="provincia" name="provincia" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="codigo-postal">Código Postal:</label>
+                        <input type="text" id="codigo-postal" name="codigo-postal" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="notas">Notas (opcional):</label>
+                        <textarea id="notas" name="notas" rows="3"></textarea>
+                    </div>
+                </form>
+            </section>
+
+            <section class="informacion-pago">
+                <h2>3. Información de Pago</h2>
+                <div class="metodos-pago">
+                    <div class="metodo">
+                        <input type="radio" id="tarjeta-credito" name="metodo-pago" value="tarjeta" checked>
+                        <label for="tarjeta-credito"><i class="far fa-credit-card"></i> Tarjeta de Crédito/Débito</label>
+                        <div class="detalles-tarjeta">
+                            <div class="form-group">
+                                <label for="numero-tarjeta">Número de Tarjeta:</label>
+                                <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="**** **** **** ****" required pattern="\d{16}" title="Ingrese un número de tarjeta válido de 16 dígitos">
+                            </div>
+                            <div class="form-group inline-inputs">
+                                <div>
+                                    <label for="fecha-expiracion">Fecha de Expiración:</label>
+                                    <input type="month" id="fecha-expiracion" name="fecha-expiracion" required>
+                                </div>
+                                <div>
+                                    <label for="cvv">CVV:</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="***" required pattern="\d{3,4}" title="Ingrese el CVV de 3 o 4 dígitos">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre-tarjeta">Nombre en la Tarjeta:</label>
+                                <input type="text" id="nombre-tarjeta" name="nombre-tarjeta" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metodo">
+                        <input type="radio" id="paypal" name="metodo-pago" value="paypal">
+                        <label for="paypal"><i class="fab fa-paypal"></i> PayPal</label>
+                        <div class="detalles-paypal" style="display: none;">
+                            <p>Serás redirigido a PayPal para completar tu compra de forma segura.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="finalizar-compra-acciones">
+            <button type="submit" class="btn btn-principal btn-lg" id="btn-finalizar-compra">Finalizar Compra</button>
+        </div>
+    </main>
+
+    <footer class="main-footer" id="contacto-footer">
+        <div class="container footer-content">
+            <div class="social-media">
+                <h4>Nuestras Redes</h4>
+                <ul>
+                    <li><a href="https://instagram.com/Crimson_Tone" target="_blank"><i class="fab fa-instagram"></i> Crimson_Tone</a></li>
+                    <li><a href="https://facebook.com/CrimsonToneEcuador" target="_blank"><i class="fab fa-facebook"></i> Crimson Tone Ecuador</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h4>Contacto</h4>
+                <p>Correo electrónico: <a href="mailto:crimson@tone.com">crimson@tone.com</a></p>
+                <p>Contacto: 0987269974</p>
+            </div>
+            <div class="copyright">
+                <p>© <span id="current-year-footer"></span> Crimson Tone. Derechos Reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Script para actualizar el año en el footer
+            document.getElementById('current-year-footer').textContent = new Date().getFullYear();
+
+            // Lógica para mostrar/ocultar detalles del método de pago
+            const metodosPagoRadios = document.querySelectorAll('input[name="metodo-pago"]');
+            const detallesTarjeta = document.querySelector('.detalles-tarjeta');
+            const detallesPaypal = document.querySelector('.detalles-paypal');
+
+            metodosPagoRadios.forEach(radio => {
+                radio.addEventListener('change', (event) => {
+                    if (event.target.value === 'tarjeta') {
+                        detallesTarjeta.style.display = 'block';
+                        detallesPaypal.style.display = 'none';
+                    } else if (event.target.value === 'paypal') {
+                        detallesTarjeta.style.display = 'none';
+                        detallesPaypal.style.display = 'block';
+                    }
+                });
+            });
+
+            // --- Lógica del Carrito ---
+            const listaProductosCarrito = document.getElementById('lista-productos-carrito');
+            const subtotalSpan = document.getElementById('subtotal');
+            const costoEnvioSpan = document.getElementById('costo-envio');
+            const totalFinalSpan = document.getElementById('total-final');
+            const cantidadCarritoNav = document.getElementById('cantidad-carrito-nav-pago'); // Cambiado a -pago
+            const emptyCartMessage = document.getElementById('empty-cart-message');
+            const resumenCarritoSection = document.querySelector('.resumen-carrito');
+            const finalizarCompraAcciones = document.querySelector('.finalizar-compra-acciones');
+
+
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+            function renderizarCarrito() {
+                listaProductosCarrito.innerHTML = ''; // Limpiar lista actual
+                let subtotalCalculado = 0;
+                let totalItems = 0;
+
+                if (carrito.length === 0) {
+                    emptyCartMessage.style.display = 'block'; // Mostrar mensaje de carrito vacío
+                    listaProductosCarrito.style.display = 'none'; // Ocultar la lista de productos
+                    subtotalSpan.textContent = '$0.00';
+                    totalFinalSpan.textContent = '$0.00';
+                    costoEnvioSpan.textContent = 'Gratis';
+                    finalizarCompraAcciones.style.display = 'none'; // Ocultar botón de finalizar compra si el carrito está vacío
+                    resumenCarritoSection.querySelector('.total-resumen').style.display = 'none'; // Ocultar el resumen de totales
+                } else {
+                    emptyCartMessage.style.display = 'none'; // Ocultar mensaje de carrito vacío
+                    listaProductosCarrito.style.display = 'block'; // Mostrar la lista de productos
+                    finalizarCompraAcciones.style.display = 'block'; // Mostrar botón de finalizar compra
+                    resumenCarritoSection.querySelector('.total-resumen').style.display = 'block'; // Mostrar el resumen de totales
+
+                    carrito.forEach(item => {
+                        const li = document.createElement('li');
+                        li.classList.add('producto-carrito');
+                        // Asegúrate de que item.imagen, item.nombre, item.precio, item.cantidad, item.id existan
+                        li.innerHTML = `
+                            <div class="imagen-producto">
+                                <img src="${item.imagen}" alt="${item.nombre}">
+                            </div>
+                            <div class="detalles-producto">
+                                <h3>${item.nombre}</h3>
+                                <p class="precio">$${item.precio ? item.precio.toFixed(2) : '0.00'}</p>
+                                <div class="cantidad">
+                                    <label for="cantidad-${item.id}">Cantidad:</label>
+                                    <input type="number" id="cantidad-${item.id}" value="${item.cantidad}" min="1" data-id="${item.id}" data-precio="${item.precio}">
+                                </div>
+                            </div>
+                            <button class="btn btn-eliminar" data-id="${item.id}"><i class="fas fa-trash"></i></button>
+                        `;
+                        listaProductosCarrito.appendChild(li);
+
+                        subtotalCalculado += (item.precio || 0) * (item.cantidad || 0); // Asegurarse de que precio y cantidad existan
+                        totalItems += (item.cantidad || 0);
+                    });
+                }
+
+                subtotalSpan.textContent = `$${subtotalCalculado.toFixed(2)}`;
+                const costoEnvio = 0; // Aquí podrías tener lógica para calcular el costo de envío
+                totalFinalSpan.textContent = `$${(subtotalCalculado + costoEnvio).toFixed(2)}`;
+                cantidadCarritoNav.textContent = totalItems; // Actualizar el contador en la navegación
+
+                // Añadir listeners a los botones de eliminar y campos de cantidad DESPUÉS de renderizar
+                document.querySelectorAll('.btn-eliminar').forEach(button => {
+                    button.addEventListener('click', (event) => {
+                        const productId = event.currentTarget.dataset.id;
+                        carrito = carrito.filter(item => item.id !== productId);
+                        localStorage.setItem('carrito', JSON.stringify(carrito));
+                        renderizarCarrito();
+                    });
+                });
+
+                document.querySelectorAll('.cantidad input[type="number"]').forEach(input => {
+                    input.addEventListener('change', (event) => {
+                        const productId = event.target.dataset.id;
+                        let newCantidad = parseInt(event.target.value);
+
+                        if (isNaN(newCantidad) || newCantidad < 1) { // Asegurar que la cantidad sea un número válido y al menos 1
+                            newCantidad = 1; // Restablecer a 1 si es inválido
+                            event.target.value = 1;
+                        }
+                        
+                        const itemIndex = carrito.findIndex(item => item.id === productId);
+                        if (itemIndex !== -1) {
+                            carrito[itemIndex].cantidad = newCantidad;
+                            localStorage.setItem('carrito', JSON.stringify(carrito));
+                            renderizarCarrito(); // Volver a renderizar para actualizar totales
+                        }
+                    });
+                });
+            }
+            renderizarCarrito();
+
+
+            // --- Lógica para el botón "Finalizar Compra" ---
+            const btnFinalizarCompra = document.getElementById('btn-finalizar-compra');
+            const formEnvio = document.getElementById('form-envio');
+
+            btnFinalizarCompra.addEventListener('click', (event) => {
+                event.preventDefault(); // Evitar el envío de formulario por defecto
+
+                // Validar que el carrito no esté vacío
+                if (carrito.length === 0) {
+                    alert('Tu carrito está vacío. Por favor, añade productos antes de proceder al pago.');
+                    return;
+                }
+
+                // Validar el formulario de envío
+                if (!formEnvio.checkValidity()) {
+                    alert('Por favor, complete todos los campos obligatorios de envío.');
+                    formEnvio.reportValidity(); // Muestra los mensajes de error del navegador
+                    return;
+                }
+
+                // Validar la información de pago (si es tarjeta de crédito)
+                const metodoPagoSeleccionado = document.querySelector('input[name="metodo-pago"]:checked').value;
+                if (metodoPagoSeleccionado === 'tarjeta') {
+                    const numeroTarjeta = document.getElementById('numero-tarjeta');
+                    const fechaExpiracion = document.getElementById('fecha-expiracion');
+                    const cvv = document.getElementById('cvv');
+                    const nombreTarjeta = document.getElementById('nombre-tarjeta');
+
+                    if (!numeroTarjeta.checkValidity() || !fechaExpiracion.checkValidity() || 
+                        !cvv.checkValidity() || !nombreTarjeta.checkValidity()) {
+                        alert('Por favor, complete correctamente todos los campos de la tarjeta de crédito.');
+                        if (!numeroTarjeta.checkValidity()) numeroTarjeta.reportValidity();
+                        else if (!fechaExpiracion.checkValidity()) fechaExpiracion.reportValidity();
+                        else if (!cvv.checkValidity()) cvv.reportValidity();
+                        else if (!nombreTarjeta.checkValidity()) nombreTarjeta.reportValidity();
+                        return;
+                    }
+                }
+
+                // Si todo es válido y el carrito tiene productos:
+                alert('¡Muchas gracias por preferirnos! Su compra ha sido un éxito. ¡Vuelva pronto!');
+
+                // Vaciar el carrito en localStorage
+                localStorage.removeItem('carrito');
+                
+                // Vaciar el array local y actualizar la UI inmediatamente
+                carrito = []; 
+                renderizarCarrito(); 
+
+                // Redirigir a la página de inicio después de un breve retraso
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1500);
+            });
+        });
+    </script>
+
+</body>
+</html>
